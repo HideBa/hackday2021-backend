@@ -7,7 +7,7 @@ env:
   GCP_PROJECT: ${{ secrets.GCP_PROJ_ID }}
   GCP_REGION: asia-northeast1
   RUN_APP: hackday
-  IMAGE_NAME: gcr.io/hackday/hackday-api
+  IMAGE_NAME: asia.gcr.io/hackday2021-308022/hackday2021-backend/hackday-api
 jobs:
   build:
     name: prod
