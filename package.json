@@ -1,0 +1,21 @@
+{
+  "name": "hackday-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:HideBa/hackday2021-backend.git",
+  "author": "HideBa <baba.papa1120.ba@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "jest": "^26.6.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1"
+  }
+}
