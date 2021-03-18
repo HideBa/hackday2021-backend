@@ -1,0 +1,44 @@
+version: '3'
+services:
+  app:
+    container_name: hackday-api
+    build:
+      context: .
+    environment:
+      DB_NAME: hackday_db
+      DB_USER: hackday_user
+      DB_PASS: password
+      DB_PORT: 27017
+      DB_HOST: db
+      SERVER_PORT: 3000
+    ports:
+      - 3000:30000
+    depends_on:
+      - db
+    links:
+      - db
+    tty: true
+  db:
+    image: mongo:4.4.4-bionic
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+      DB_NAME: hackday_db
+      DB_USER: hackday_user
+      DB_PASS: password
+      DB_PORT: 27017
+      DB_HOST: db
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db:/data/db
+      # - ./configdb:/data/configdb
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8001:8001
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: password
