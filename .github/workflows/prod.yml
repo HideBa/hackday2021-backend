@@ -34,7 +34,7 @@ jobs:
         run: gcloud auth configure-docker --quiet
       - name: docker build
         run: |
-          docker build -t ${IMAGE_NAME}:${{ github.sha }} .
+          docker build -t ${IMAGE_NAME}:latest .
       - name: docker push
         run: |
           docker push ${IMAGE_NAME}
