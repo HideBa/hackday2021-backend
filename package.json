@@ -12,7 +12,9 @@
     "stop": "lsof -ti :3000 | xargs kill",
     "start:db": "docker run --name hackday-mongo -p 27017:27017 mongo & sleep 5",
     "stop:db": "docker stop hackday-mongo",
-    "start:mongo-express": "node ./node_modules/mongo-express/app"
+    "start:mongo-express": "node ./node_modules/mongo-express/app",
+    "lint": "eslint .",
+    "check": "run-p lint"
   },
   "dependencies": {
     "dotenv": "^8.2.0",

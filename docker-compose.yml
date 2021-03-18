@@ -24,6 +24,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: hackday_db
       DB_NAME: hackday_db
       DB_USER: hackday_user
       DB_PASS: password
