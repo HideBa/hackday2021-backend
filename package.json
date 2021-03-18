@@ -6,6 +6,14 @@
   "author": "HideBa <baba.papa1120.ba@gmail.com>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "start": "node ./app/app.mjs",
+    "dev": "nodemon ./app/app.mjs",
+    "stop": "lsof -ti :3000 | xargs kill",
+    "start:db": "docker run --name hackday-mongo -p 27017:27017 mongo & sleep 5",
+    "stop:db": "docker stop hackday-mongo",
+    "start:mongo-express": "node ./node_modules/mongo-express/app"
+  },
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1"

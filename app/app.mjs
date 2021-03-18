@@ -1,5 +1,5 @@
 import express from "express";
-import { serverConfig } from "./config/index.mjs"
+import { serverConfig } from "../config/index.mjs"
 
 const app = express();
 
