@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-import { dbConfig as dbConfiguration} from "./mongodb.config";
+import { default as dbConfiguration} from "./mongodb.config.mjs";
 
 const config = dotenv.config();
 
